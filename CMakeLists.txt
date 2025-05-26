@@ -20,6 +20,9 @@ install(TARGETS jsonl2json)
 
 SET(CPACK_DEBIAN_PACKAGE_MAINTAINER "43220762+hwse@users.noreply.github.com")
 SET(CPACK_PACKAGE_CONTACT "hwse")
-SET(CPACK_DEBIAN_PACKAGE_DEPENDS "libsimdjson19")
-
+IF (ENABLE_CPM)
+    SET(CPACK_DEBIAN_PACKAGE_DEPENDS " ")
+else ()
+    SET(CPACK_DEBIAN_PACKAGE_DEPENDS "libsimdjson19")
+endif ()
 include(CPack)
