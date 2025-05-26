@@ -1,7 +1,10 @@
+#include <cassert>
 #include <cstdlib>
 #include <fstream>
+#include <iostream>
 #include <optional>
 #include <simdjson.h>
+#include <span>
 #include <string_view>
 
 namespace
